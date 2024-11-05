@@ -1,0 +1,53 @@
+body{
+    margin: unset;
+}
+.black{
+    position: absolute;
+    top:0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    background-color: #a59090b7;
+    display: none;
+}
+.dialogbox{
+    display: none;
+    background-color: white;
+    padding: 1em !important;
+    border-radius: 6px;
+    box-shadow: 0px 0px 16px rgb(44, 43, 43);
+    animation: opac 0.5s;
+    box-sizing: border-box;
+}
+@keyframes opac {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.diloghdr{
+    margin: unset !important;
+}
+.popbdy{
+    margin: 1em;
+    padding: 0 1em;
+}
+.popfooter{
+    float: right;
+}
+.popfooter button{
+    border: none;
+    background-color: transparent;
+    color: rgb(39, 39, 206);
+    padding: 0.8em;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.popfooter button:hover{
+    background-color: #f2f2f2;
+
+}
+.position{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}

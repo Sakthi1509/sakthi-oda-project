@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div><br /><br />
+        <button class="but" onclick="disppop()">CLICK ME TO OPEN DIALOG BOX</button>
+        <p style="margin: 1em;">You can Also click Behind the dialog box to dismis the dialog box</p>
+    </div>
+
+
+    <div class="black" id="pop" onclick="dismis()">
+        <!-- it will decrese the opacity -->
+    </div>
+
+    <div class="position">
+        <div class="dialogbox" id="dialog">
+            <h4 class="diloghdr">Title of the POPUP</h4>
+            <div class="popbdy">
+                Do You Want To DELETE ..?
+            </div>
+            <div class="popfooter">
+                <button onclick="dismis()" style="color: #dc3545;" title="Close the Dialog Box">Cancel</button>
+                <button style="color: #198754;">Submit</button>
+            </div><br /><br />
+        </div>
+    </div>
+</body>
+<script>
+    function disppop() {
+        document.getElementById('pop').style.display = 'block';
+        document.getElementById('dialog').style.display = 'block';
+    }
+    function dismis() {
+        document.getElementById('pop').style.display = 'none';
+        document.getElementById('dialog').style.display = 'none';
+    }
+</script>
+<style>
+    body {
+        margin: unset;
+    }
+
+    .but{
+        background-color: transparent;
+        border: 1px solid purple;
+        padding: 1em;
+        border-radius: 6px;
+        margin: 1em;
+    }
+
+    .black {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #16151586;
+        display: none;
+    }
+
+    .dialogbox {
+        display: none;
+        background-color: white;
+        padding: 1em !important;
+        border-radius: 6px;
+        box-shadow: 0px 6px 16px rgb(44, 43, 43);
+        animation: opac 0.3s;
+        box-sizing: border-box;
+    }
+
+    @keyframes opac {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .diloghdr {
+        margin: unset !important;
+    }
+
+    .popbdy {
+        margin: 1em 0;
+    }
+
+    .popfooter {
+        float: right;
+    }
+
+    .popfooter button {
+        border: none;
+        background-color: transparent;
+        color: rgb(39, 39, 206);
+        padding: 0.8em;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .popfooter button:hover {
+        background-color: #f2f2f2;
+
+    }
+
+    .position {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+</html>

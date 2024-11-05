@@ -1,0 +1,22 @@
+body {background-color:  rgb(139, 49, 139);
+
+
+}
+
+h1 {
+  color: white;
+  font-family: verdana;
+  
+  text-align:center;
+  font-family: sans-serif;
+  font-size: 400%;
+  padding: 10px;
+}
+h2 {
+    color: white;
+    font-family:  'Segoe UI', Tahoma, sans-serif;
+    font-size: 120%;
+    text-align:center;
+    padding: 5px;
+   
+}
